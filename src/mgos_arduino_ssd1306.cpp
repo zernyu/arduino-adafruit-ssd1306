@@ -6,6 +6,7 @@
  */
 
 #include "mgos_arduino_ssd1306.h"
+#include "Backwards12pt7b.h"
 
 static Adafruit_SSD1306::Resolution mgos_ssd1306_get_res(int res) {
   Adafruit_SSD1306::Resolution r;
@@ -44,6 +45,7 @@ void mgos_ssd1306_begin(Adafruit_SSD1306 *ssd, int vccstate, int i2caddr,
                         bool reset) {
   if (ssd == nullptr) return;
   ssd->begin(vccstate, i2caddr, reset);
+  ssd->Adafruit_GFX::setFont(&Backwards12pt7b);
 }
 
 void mgos_ssd1306_command(Adafruit_SSD1306 *ssd, int c) {
