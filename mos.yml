@@ -12,7 +12,6 @@ libs:
   - origin: https://github.com/mongoose-os-libs/arduino-wire
   - origin: https://github.com/mongoose-os-libs/arduino-spi
   - origin: https://github.com/zernyu/arduino-adafruit-gfx
-    version: 2.18.0
 
 tags:
   - arduino
